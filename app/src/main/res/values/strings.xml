@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Aparna</string>
+    <string name="hintEmail">Enter your email</string>
+    <string name="hintPassword">Enter your password</string>
+    <string name="btnRegister">Register</string>
+    <string name="tvRegistered">Already registered? Sign in here</string>
+    <string name="tvRegister">New to Aparna...Register here</string>
+    <string name="btnLogin">Login</string>
+    <string name="tvForgotPassword">Forgot password?</string>
+    <string name="tvEnterTtile">Enter Title</string>
+    <string name="tvEnterDescription">Enter Description</string>
+    <string name="btnShare">Share</string>
+    <string name="title_activity_feed">FeedActivity</string>
+    <string name="likes">Likes</string>
+    <string name="Comments">Comments</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

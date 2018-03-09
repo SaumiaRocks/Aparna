@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "612172265150",
+    "firebase_url": "https://aparna-3.firebaseio.com",
+    "project_id": "aparna-3",
+    "storage_bucket": "aparna-3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:612172265150:android:64bab279f7485921",
+        "android_client_info": {
+          "package_name": "cc.httpsdesignstudio.aparna"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "612172265150-cp5592p1gs0j03uct837kn2nhfgtr107.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "cc.httpsdesignstudio.aparna",
+            "certificate_hash": "c26d4a16cd68a11115b32ab92f4248d4abbf21f5"
+          }
+        },
+        {
+          "client_id": "612172265150-f93ohfjp84k8k80iuen2mohndq21n53f.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAM2moP5wIBwliC5ZqhgIS8y5M3KJv2M8Y"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "612172265150-f93ohfjp84k8k80iuen2mohndq21n53f.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

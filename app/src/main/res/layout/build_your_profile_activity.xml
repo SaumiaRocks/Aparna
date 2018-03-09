@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="cc.httpsdesignstudio.aparna.BuildYourProfile">
+
+    <fragment
+        android:id="@+id/UpperFragment"
+        android:name="cc.httpsdesignstudio.aparna.Username"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        tools:layout="@layout/fragment_username"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        >
+
+        <fragment
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/firstFragment"
+            android:name="cc.httpsdesignstudio.aparna.EducationQualification"
+            ></fragment>
+        <fragment
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/secondFragment"
+            android:name="cc.httpsdesignstudio.aparna.Interest"/>
+
+    </LinearLayout>
+
+    <android.support.v4.widget.ContentLoadingProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="280dp"
+        android:layout_height="18dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="25dp"
+        android:progressTint="@color/colorPrimary"
+        style="@style/Base.Widget.AppCompat.ProgressBar.Horizontal"
+        />
+
+    <fragment
+        android:id="@+id/LowerFragment"
+        android:name="cc.httpsdesignstudio.aparna.BirthdateFragment"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        tools:layout="@layout/fragment_birthdate"
+        />
+
+    <Button
+        android:id="@+id/btnNext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_rounded_rectangle"
+        android:text="Next"
+        android:textColor="@color/colorIcons"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="15dp"
+        />
+
+    <Button
+        android:id="@+id/btnNext2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_rounded_rectangle"
+        android:text="Next"
+        android:textColor="@color/colorIcons"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="15dp"
+        android:visibility="gone"
+        />
+
+
+
+
+
+</LinearLayout>

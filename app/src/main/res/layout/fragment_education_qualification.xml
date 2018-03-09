@@ -1,0 +1,57 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="cc.httpsdesignstudio.aparna.EducationQualification">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="#EEEEEE">
+
+        <TextView
+
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="25dp"
+            android:textStyle="bold"
+            android:textColor="@color/colorText"
+            android:text="Education Qualification"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            />
+
+        <EditText
+            android:id="@+id/etEducationQualification"
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:hint="  For ex :B.tech"
+            android:textSize="16sp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="50dp"/>
+
+        <TextView
+            android:layout_marginBottom="25dp"
+            android:textStyle="bold"
+            android:textColor="@color/colorText"
+            android:text="Skills"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            />
+
+        <EditText
+            android:id="@+id/etSkills"
+            android:hint="   Embroidery, Cooking, Gardening..."
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="25dp"/>
+
+    </LinearLayout>
+
+</FrameLayout>
