@@ -77,6 +77,18 @@
         android:visibility="gone"
         />
 
+    <Button
+        android:id="@+id/btnNext3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_rounded_rectangle"
+        android:text="Next"
+        android:textColor="@color/colorIcons"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="15dp"
+        android:visibility="gone"
+        />
+
 
 
 
