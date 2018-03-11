@@ -15,7 +15,15 @@
 
         <include layout="@layout/layout_aparna_logo"/>
 
-
+        <EditText
+            android:id="@+id/etUsername"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:layout_marginBottom="15dp"
+            android:hint="Enter your username"
+            android:gravity="center_horizontal"/>
 
         <EditText
             android:id="@+id/etEmail"

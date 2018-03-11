@@ -4,6 +4,7 @@ import android.app.Fragment;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Debug;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -15,6 +16,12 @@ import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
+
 public class BuildYourProfile extends AppCompatActivity {
 
     EditText etName, etEducationQualification, etSkills, etInterest, etWantToLearn;
@@ -23,6 +30,12 @@ public class BuildYourProfile extends AppCompatActivity {
     Button btnNext2;
     Button btnNext3;
     ProgressBar progressBar;
+    FirebaseAuth firebaseAuth;
+    FirebaseStorage storage;
+    StorageReference storageReference;
+    Uri uri;
+    FirebaseDatabase database;
+    DatabaseReference databaseReference;
 
 
     @Override
@@ -42,6 +55,12 @@ public class BuildYourProfile extends AppCompatActivity {
         btnNext2 = findViewById(R.id.btnNext2);
         btnNext3 = findViewById(R.id.btnNext3);
         progressBar = findViewById(R.id.progressBar);
+        storage = FirebaseStorage.getInstance();
+        storageReference = storage.getReference();
+        database = FirebaseDatabase.getInstance();
+        databaseReference = database.getReference();
+        firebaseAuth = FirebaseAuth.getInstance();
+
 
         progressBar.setProgress(33);
         etSkills.setText(null);
@@ -69,7 +88,14 @@ public class BuildYourProfile extends AppCompatActivity {
                     Log.e("etname", "inside etName if , etNAme = " + etName.getText().toString());
                     Log.e("Status", "changing birthday to edu");
 
-                    String name = etName.getText().toString();
+                    String name = etName.getText().toString().trim();
+                    String email = firebaseAuth.getCurrentUser().getEmail().trim();
+
+                    // Storing data on firebase
+
+                    databaseReference.child("Users").child("Name").setValue(name);
+
+
 //                    String birthDate = tvBirthDate.getText().toString();
                     ProfilePic profilePicFragment;
                     profilePicFragment = new ProfilePic();
@@ -103,8 +129,13 @@ public class BuildYourProfile extends AppCompatActivity {
             public void onClick(View view) {
                 if(etSkills.getText().toString().trim()!= null && etEducationQualification.getText().toString().trim() != null) {
                     Log.e("Status", "changing edu to interest");
-                    String educationQualification = etEducationQualification.getText().toString();
+                    String educationQualification = etEducationQualification.getText().toString().trim();
                     String skills= etSkills.getText().toString();
+                    String email = firebaseAuth.getCurrentUser().getEmail().trim();
+
+                    //storing data pn firebase
+                    databaseReference.child("Users").child(email).child("Education Qualification").setValue(educationQualification);
+
                     Interest interestFragment;
                     interestFragment = new Interest();
                     EducationQualification educationQualificationfragment;
@@ -118,6 +149,8 @@ public class BuildYourProfile extends AppCompatActivity {
                     fragmentTransaction.commit();
 
                     progressBar.setProgress(100);
+                    btnNext2.setVisibility(View.GONE);
+                    btnNext3.setVisibility(View.VISIBLE);
                 }
             }
         });

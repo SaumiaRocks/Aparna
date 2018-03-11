@@ -2,6 +2,8 @@ package cc.httpsdesignstudio.aparna;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.net.Uri;
+import android.os.Build;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -16,6 +18,10 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
 
 public class LoginActivity extends AppCompatActivity implements View.OnClickListener{
 
@@ -26,6 +32,12 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     TextView tvForgotPassword;
     ProgressDialog progressDialog;
     FirebaseAuth firebaseAuth;
+    FirebaseStorage storage;
+    StorageReference storageReference;
+    Uri uri;
+    FirebaseDatabase database;
+    DatabaseReference databaseReference;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,8 +51,13 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         tvForgotPassword = (TextView) findViewById(R.id.tvForgotPassword);
         progressDialog = new ProgressDialog(this);
         firebaseAuth = FirebaseAuth.getInstance();
-/*
-        if(firebaseAuth.getCurrentUser()!=null) {
+        storage = FirebaseStorage.getInstance();
+        storageReference = storage.getReference();
+        database = FirebaseDatabase.getInstance();
+        databaseReference = database.getReference();
+
+
+     /*   if(firebaseAuth.getCurrentUser()!=null) {
             // Start profile activity
             LoginActivity.this.finish();
             startActivity(new Intent(LoginActivity.this, FeedActivity.class));
@@ -73,7 +90,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                         if(task.isSuccessful()) {
                             //start the profile activity
                             LoginActivity.this.finish();
-                            startActivity(new Intent(LoginActivity.this, FeedActivity.class));
+                            startActivity(new Intent(LoginActivity.this, BuildYourProfile.class));
                         }
                         else {
                             Toast.makeText(LoginActivity.this, "Could not login. Please try again", Toast.LENGTH_SHORT).show();
