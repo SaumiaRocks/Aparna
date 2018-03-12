@@ -74,7 +74,7 @@ public class CreatePostActivity extends AppCompatActivity {
         ivFeed.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(CreatePostActivity.this, ProfileActivity.class);
+                Intent intent = new Intent(CreatePostActivity.this, FeedActivity.class);
                 startActivity(intent);
             }
         });

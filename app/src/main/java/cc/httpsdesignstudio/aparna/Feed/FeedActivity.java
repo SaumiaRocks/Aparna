@@ -70,8 +70,10 @@ public class FeedActivity extends AppCompatActivity {
         ivAlert.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(FeedActivity.this, LikesActivity.class);
-                startActivity(intent);
+
+                //start likes activity
+               /* Intent intent = new Intent(FeedActivity.this, LikesActivity.class);
+                startActivity(intent);*/
             }
         });
         ivProfile.setOnClickListener(new View.OnClickListener() {
