@@ -1,4 +1,4 @@
-package cc.httpsdesignstudio.aparna;
+package cc.httpsdesignstudio.aparna.Feed;
 
 import android.net.Uri;
 import android.support.v7.widget.RecyclerView;
@@ -8,6 +8,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.squareup.picasso.Picasso;
+
+import cc.httpsdesignstudio.aparna.R;
 
 /**
  * Created by Saumia Singhal on 3/8/2018.

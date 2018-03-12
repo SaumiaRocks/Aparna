@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="cc.httpsdesignstudio.aparna.BuildYourProfile">
+    tools:context="cc.httpsdesignstudio.aparna.Profile.BuildYourProfile">
 
     <fragment
         android:id="@+id/UpperFragment"
@@ -26,13 +26,13 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:id="@+id/firstFragment"
-            android:name="cc.httpsdesignstudio.aparna.EducationQualification"
+            android:name="cc.httpsdesignstudio.aparna.Profile.EducationQualification"
             ></fragment>
         <fragment
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:id="@+id/secondFragment"
-            android:name="cc.httpsdesignstudio.aparna.Interest"/>
+            android:name="cc.httpsdesignstudio.aparna.Profile.Interest"/>
 
     </LinearLayout>
 
@@ -48,7 +48,7 @@
 
     <fragment
         android:id="@+id/LowerFragment"
-        android:name="cc.httpsdesignstudio.aparna.BirthdateFragment"
+        android:name="cc.httpsdesignstudio.aparna.Profile.BirthdateFragment"
         android:layout_width="match_parent"
         android:layout_height="250dp"
         tools:layout="@layout/fragment_birthdate"

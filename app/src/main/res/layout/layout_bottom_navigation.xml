@@ -1,18 +1,66 @@
 <?xml version="1.0" encoding="utf-8"?>
+<merge>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="50dp"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/bottomNavigation"
+    android:id="@+id/relLayoutBottomNavigation"
     android:layout_alignParentBottom="true">
 
-   <com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx
-       android:layout_width="match_parent"
+    <!-- <com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx
+       android:layout_width="wrap_content"
        android:layout_height="50dp"
        android:background="@color/colorPrimary"
        app:menu="@menu/bottom_navigation_menu"
-       />
+       android:id="@+id/bottomNavigation"
+       />-->
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:background="@color/colorPrimary"
+        >
+
+        <ImageView
+            android:id="@+id/ivFeed"
+            android:tint="@color/colorIcons"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/icfeed"
+            android:layout_marginLeft="50dp"/>
+
+        <ImageView
+            android:id="@+id/ivProfile"
+            android:tint="@color/colorIcons"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/ic_profile"
+            android:layout_marginLeft="50dp"/>
+
+        <ImageView
+            android:id="@+id/ivAlert"
+            android:tint="@color/colorIcons"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/ic_alert"
+            android:layout_marginLeft="50dp"/>
+
+        <ImageView
+            android:id="@+id/ivMessaage"
+            android:tint="@color/colorIcons"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/ic_message"
+            android:layout_marginLeft="50dp"/>
+
+
+    </LinearLayout>
 
 
 </RelativeLayout>
+</merge>

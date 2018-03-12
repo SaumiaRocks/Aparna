@@ -1,14 +1,11 @@
-package cc.httpsdesignstudio.aparna;
+package cc.httpsdesignstudio.aparna.Profile;
 
-import android.app.Fragment;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
 import android.content.Intent;
 import android.net.Uri;
-import android.os.Debug;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -21,6 +18,10 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
+
+import cc.httpsdesignstudio.aparna.Feed.FeedActivity;
+import cc.httpsdesignstudio.aparna.ProfilePic;
+import cc.httpsdesignstudio.aparna.R;
 
 public class BuildYourProfile extends AppCompatActivity {
 
@@ -89,11 +90,10 @@ public class BuildYourProfile extends AppCompatActivity {
                     Log.e("Status", "changing birthday to edu");
 
                     String name = etName.getText().toString().trim();
-                    String email = firebaseAuth.getCurrentUser().getEmail().trim();
 
                     // Storing data on firebase
 
-                    databaseReference.child("Users").child("Name").setValue(name);
+
 
 
 //                    String birthDate = tvBirthDate.getText().toString();
@@ -131,10 +131,7 @@ public class BuildYourProfile extends AppCompatActivity {
                     Log.e("Status", "changing edu to interest");
                     String educationQualification = etEducationQualification.getText().toString().trim();
                     String skills= etSkills.getText().toString();
-                    String email = firebaseAuth.getCurrentUser().getEmail().trim();
 
-                    //storing data pn firebase
-                    databaseReference.child("Users").child(email).child("Education Qualification").setValue(educationQualification);
 
                     Interest interestFragment;
                     interestFragment = new Interest();

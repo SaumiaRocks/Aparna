@@ -1,12 +1,10 @@
-package cc.httpsdesignstudio.aparna;
+package cc.httpsdesignstudio.aparna.Feed;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
-import android.media.Image;
 import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.AppCompatEditText;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
@@ -23,6 +21,14 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
+import com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx;
+
+import cc.httpsdesignstudio.aparna.Alert.LikesActivity;
+import cc.httpsdesignstudio.aparna.Profile.ProfileActivity;
+import cc.httpsdesignstudio.aparna.R;
+import cc.httpsdesignstudio.aparna.Utils.BottomNavigation;
+
+//includes Bottom Navigation bar
 
 public class CreatePostActivity extends AppCompatActivity {
 
@@ -36,6 +42,8 @@ public class CreatePostActivity extends AppCompatActivity {
     Uri uri;
     FirebaseDatabase database;
     DatabaseReference databaseReference;
+    ImageView ivFeed, ivProfile, ivAlert, ivMessage;
+
 
     @SuppressLint("WrongViewCast")
     @Override
@@ -55,7 +63,47 @@ public class CreatePostActivity extends AppCompatActivity {
         database = FirebaseDatabase.getInstance();
         databaseReference = database.getReference();
 
+        //setting up bottom navigation menu
+
+        ivFeed = findViewById(R.id.ivFeed);
+        ivProfile = findViewById(R.id.ivProfile);
+        ivAlert = findViewById(R.id.ivAlert);
+        ivMessage = findViewById(R.id.ivMessaage);
+
+        //setting up buttons
+        ivFeed.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(CreatePostActivity.this, ProfileActivity.class);
+                startActivity(intent);
+            }
+        });
+        ivProfile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(CreatePostActivity.this, ProfileActivity.class);
+                startActivity(intent);
+            }
+        });
+        ivAlert.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(CreatePostActivity.this, LikesActivity.class);
+                startActivity(intent);
+            }
+        });
+        ivMessage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //start messaging activity
+                /*Intent intent = new Intent(FeedActivity.this, ProfileActivity.class);
+                startActivity(intent);*/
+            }
+        });
+
+
         ivUploadedImage.setVisibility(View.GONE);
+//        setupBottomNavigationViewBar();
 
         ivUploadImage.setOnClickListener(new OnClickListener() {
             @Override
@@ -126,6 +174,15 @@ public class CreatePostActivity extends AppCompatActivity {
             ivUploadedImage.setImageURI(uri);
         }
     }
+
+/*
+
+    void setupBottomNavigationViewBar() {
+        BottomNavigationViewEx bottomNavigationViewEx = new BottomNavigationViewEx(getBaseContext());
+        BottomNavigation.setupBottomNavigationView(bottomNavigationViewEx);
+        BottomNavigation.enableNavigation(CreatePostActivity.this, bottomNavigationViewEx);
+    }
+*/
 
 
     public void btnShareClicked(View view) {

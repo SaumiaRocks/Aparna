@@ -13,20 +13,23 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".MainActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity android:name=".LoginActivity" />
-        <activity android:name=".ProfileActivity" />
-        <activity android:name=".CreatePostActivity" />
+        <activity android:name=".Profile.ProfileActivity" />
+        <activity android:name=".Feed.CreatePostActivity" />
+        <activity android:name=".Alert.LikesActivity">
+        </activity>
         <activity
-            android:name=".FeedActivity"
+            android:name=".Feed.FeedActivity"
             android:label="@string/title_activity_feed"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".BuildYourProfile">
+            android:theme="@style/AppTheme.NoActionBar" >
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+        </activity>
+        <activity android:name=".Profile.BuildYourProfile">
 
         </activity>
     </application>
