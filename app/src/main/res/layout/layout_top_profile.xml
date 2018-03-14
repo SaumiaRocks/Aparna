@@ -22,12 +22,12 @@
 
         >
 
-        <ImageView
+        <de.hdodenhof.circleimageview.CircleImageView
             android:layout_width="75dp"
             android:layout_height="75dp"
             android:layout_marginTop="15dp"
             android:layout_marginLeft="15dp"
-            android:src="@drawable/icfeed" />
+            android:src="@mipmap/ic_profilepic" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -60,7 +60,7 @@
             android:layout_marginTop="10dp"
             android:layout_marginBottom="15dp"
             android:text="Edit Profile"
-            android:background="@color/colorPrimary"
+            android:background="@drawable/button_rounded_rectangle"
             android:textColor="@color/colorIcons"
 
             />

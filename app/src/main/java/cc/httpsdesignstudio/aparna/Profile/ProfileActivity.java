@@ -7,6 +7,8 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 
 import com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx;
@@ -23,6 +25,9 @@ public class ProfileActivity extends AppCompatActivity {
     private static final String TAG = "ProfileActivity";
     public static final int ACTIVITY_NUM = 2;
     ImageView ivFeed, ivProfile, ivAlert, ivMessage;
+    ImageView ivSignOut;
+    Button btnSignOut;
+    private Button btnEditProfile;
 
 
     @Override
@@ -30,17 +35,21 @@ public class ProfileActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.profile_activity);
 
+        ivSignOut = findViewById(R.id.ivSignOut);
+        btnSignOut = findViewById(R.id.btnSignOut);
+
         //Bottom Navigation View
         ivFeed = findViewById(R.id.ivFeed);
         ivProfile = findViewById(R.id.ivProfile);
         ivAlert = findViewById(R.id.ivAlert);
         ivMessage = findViewById(R.id.ivMessaage);
+        btnEditProfile = findViewById(R.id.btnEditProfile);
 
         //setting up buttons
         ivFeed.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(ProfileActivity.this, ProfileActivity.class);
+                Intent intent = new Intent(ProfileActivity.this, FeedActivity.class);
                 startActivity(intent);
             }
         });
@@ -60,6 +69,37 @@ public class ProfileActivity extends AppCompatActivity {
             }
         });
 
+        ivSignOut.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+//                if(btnSignOut.getVisibility() == View.GONE) {
+                    btnSignOut.setVisibility(View.VISIBLE);
+//                }
+                /*else if(btnSignOut.getVisibility() == View.VISIBLE) {
+                    btnSignOut.setVisibility(View.GONE);
+                }
+*/
+            }
+        });
+
+        btnSignOut.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                // Signing out user...
+
+            }
+        });
+
+        btnEditProfile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent intent = new Intent (ProfileActivity.this, BuildYourProfile.class);
+                startActivity(intent);
+            }
+        });
 
         Log.e(TAG, "OnCreate : called");
 
