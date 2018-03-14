@@ -1,4 +1,4 @@
-package cc.httpsdesignstudio.aparna;
+package cc.httpsdesignstudio.aparna.Feed;
 
 /**
  * Created by Saumia Singhal on 3/6/2018.

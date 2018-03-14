@@ -13,7 +13,14 @@
         android:layout_centerHorizontal="true"
         >
 
-        <include layout="@layout/layout_aparna_logo"/>
+
+        <ImageView
+            android:layout_width="125dp"
+            android:layout_height="125dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="50dp"
+            android:layout_marginBottom="50dp"
+            android:src="@mipmap/aparnalogo"/>
 
         <EditText
             android:id="@+id/etEmailLogin"
@@ -52,13 +59,14 @@
 
             />
 
-            <TextView
+        <TextView
             android:id="@+id/tvRegister"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
             android:layout_marginBottom="10dp"
             android:text="@string/tvRegister"
-            android:layout_gravity="center_horizontal"
+            android:textColor="@color/colorLink"
 
             />
 
@@ -68,8 +76,8 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="25dp"
             android:text="@string/tvForgotPassword"
+            android:textColor="@color/colorLink"
             android:layout_gravity="center_horizontal"
-
             />
 
 

@@ -1,4 +1,4 @@
-package cc.httpsdesignstudio.aparna;
+package cc.httpsdesignstudio.aparna.Profile;
 
 
 import android.os.Bundle;
@@ -7,6 +7,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
+
+import cc.httpsdesignstudio.aparna.R;
 
 
 /**

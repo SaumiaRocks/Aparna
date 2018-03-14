@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="cc.httpsdesignstudio.aparna.ProfileActivity">
+    tools:context="cc.httpsdesignstudio.aparna.Profile.ProfileActivity">
+
 <RelativeLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent">
@@ -12,12 +13,45 @@
     <RelativeLayout
         android:id="@+id/relativeLayout1"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="50dp">
 
         <include layout="@layout/layout_top_tabs">
         </include>
 
     </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:text="User Id"
+            android:textSize="25dp"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="25dp"
+            android:textColor="@color/colorIcons"
+            android:layout_weight="3"
+
+            />
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/ic_notification"
+            android:tint="@color/colorIcons"
+            android:layout_weight="1"
+            />
+
+
+    </LinearLayout>
+
+
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -26,7 +60,7 @@
             android:layout_below="@id/relativeLayout1"
             >
 
-            <include layout="@layout/layout_center_viewpager"/>
+           <include layout="@layout/layout_top_profile"/>
 
         </RelativeLayout>
 
@@ -35,6 +69,18 @@
     </include>
 
 </RelativeLayout>
+
+    <Button
+        android:textColor="@color/colorSecondaryText"
+        android:text="Sign Out"
+        android:textSize="12sp"
+        android:layout_gravity="right"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="40dp"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:visibility="gone"/>
+
 
 
 </android.support.design.widget.CoordinatorLayout>

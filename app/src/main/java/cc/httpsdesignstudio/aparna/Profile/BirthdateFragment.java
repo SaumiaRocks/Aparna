@@ -1,4 +1,4 @@
-package cc.httpsdesignstudio.aparna;
+package cc.httpsdesignstudio.aparna.Profile;
 
 
 import android.annotation.TargetApi;
@@ -17,6 +17,8 @@ import android.widget.DatePicker;
 import android.widget.TextView;
 
 import java.util.Calendar;
+
+import cc.httpsdesignstudio.aparna.R;
 
 
 /**
