@@ -37,9 +37,10 @@ public class ProfileActivity extends AppCompatActivity {
 
         ivSignOut = findViewById(R.id.ivSignOut);
         btnSignOut = findViewById(R.id.btnSignOut);
+        btnEditProfile = findViewById(R.id.btnEditProfile);
 
         //Bottom Navigation View
-        ivFeed = findViewById(R.id.ivFeed);
+ /*       ivFeed = findViewById(R.id.ivFeed);
         ivProfile = findViewById(R.id.ivProfile);
         ivAlert = findViewById(R.id.ivAlert);
         ivMessage = findViewById(R.id.ivMessaage);
@@ -64,11 +65,11 @@ public class ProfileActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 //start messaging activity
-                /*Intent intent = new Intent(FeedActivity.this, ProfileActivity.class);
-                startActivity(intent);*/
+                *//*Intent intent = new Intent(FeedActivity.this, ProfileActivity.class);
+                startActivity(intent);*//*
             }
         });
-
+*/
         ivSignOut.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -103,20 +104,19 @@ public class ProfileActivity extends AppCompatActivity {
 
         Log.e(TAG, "OnCreate : called");
 
-//        setupBottomNavigationViewBar();
+        setupBottomNavigationViewBar();
 
     }
-/*
     void setupBottomNavigationViewBar() {
 
         Log.e(TAG, "setupBottomNavigationViewBar called");
         BottomNavigationViewEx bottomNavigationViewEx = (BottomNavigationViewEx) findViewById(R.id.bottomNavigation);
-//        BottomNavigation.setupBottomNavigationView(bottomNavigationViewEx);
+        BottomNavigation.setupBottomNavigationView(bottomNavigationViewEx);
         BottomNavigation.enableNavigation(ProfileActivity.this,bottomNavigationViewEx);
         Menu menu = bottomNavigationViewEx.getMenu();
         MenuItem menuItem = menu.getItem(ACTIVITY_NUM);
         menuItem.setChecked(true);
 
 
-}*/
+}
 }

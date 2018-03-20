@@ -10,6 +10,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
@@ -18,12 +19,16 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
+import com.nostra13.universalimageloader.core.ImageLoader;
 
 import cc.httpsdesignstudio.aparna.Feed.FeedActivity;
 import cc.httpsdesignstudio.aparna.ProfilePic;
 import cc.httpsdesignstudio.aparna.R;
+import cc.httpsdesignstudio.aparna.UniversalImageLoader;
 
 public class BuildYourProfile extends AppCompatActivity {
+
+    private static final String TAG = "BuildYourProfile";
 
     EditText etName, etEducationQualification, etSkills, etInterest, etWantToLearn;
     TextView tvBirthDate;
@@ -37,6 +42,7 @@ public class BuildYourProfile extends AppCompatActivity {
     Uri uri;
     FirebaseDatabase database;
     DatabaseReference databaseReference;
+    ImageView ivUploadProfilePic;
 
 
     @Override
@@ -55,6 +61,7 @@ public class BuildYourProfile extends AppCompatActivity {
         btnNext = findViewById(R.id.btnNext);
         btnNext2 = findViewById(R.id.btnNext2);
         btnNext3 = findViewById(R.id.btnNext3);
+        ivUploadProfilePic = findViewById(R.id.ivUploadProfilePic);
         progressBar = findViewById(R.id.progressBar);
         storage = FirebaseStorage.getInstance();
         storageReference = storage.getReference();
@@ -173,4 +180,16 @@ public class BuildYourProfile extends AppCompatActivity {
         });
 
     }
+
+    //setting up Universal Image Loader
+    void initImageLoader() {
+        UniversalImageLoader universalImageLoader = new UniversalImageLoader(BuildYourProfile.this);
+        ImageLoader.getInstance().init(universalImageLoader.getConfig());
+    }
+
+    void settingUpProfilePic() {
+
+    }
+
+
 }

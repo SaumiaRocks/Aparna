@@ -7,6 +7,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
@@ -32,6 +34,7 @@ import cc.httpsdesignstudio.aparna.Utils.BottomNavigation;
 
 public class CreatePostActivity extends AppCompatActivity {
 
+    private static final String TAG = "CreatePostActivity";
     final int GALLERY_REQUEST_CODE = 1;
     TextView etName;
     EditText etTitle, etDescription;
@@ -65,7 +68,7 @@ public class CreatePostActivity extends AppCompatActivity {
 
         //setting up bottom navigation menu
 
-        ivFeed = findViewById(R.id.ivFeed);
+  /*      ivFeed = findViewById(R.id.ivFeed);
         ivProfile = findViewById(R.id.ivProfile);
         ivAlert = findViewById(R.id.ivAlert);
         ivMessage = findViewById(R.id.ivMessaage);
@@ -96,14 +99,14 @@ public class CreatePostActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 //start messaging activity
-                /*Intent intent = new Intent(FeedActivity.this, ProfileActivity.class);
-                startActivity(intent);*/
+                *//*Intent intent = new Intent(FeedActivity.this, ProfileActivity.class);
+                startActivity(intent);*//*
             }
         });
-
+*/
 
         ivUploadedImage.setVisibility(View.GONE);
-//        setupBottomNavigationViewBar();
+        setupBottomNavigationViewBar();
 
         ivUploadImage.setOnClickListener(new OnClickListener() {
             @Override
@@ -175,16 +178,13 @@ public class CreatePostActivity extends AppCompatActivity {
         }
     }
 
-/*
-
     void setupBottomNavigationViewBar() {
-        BottomNavigationViewEx bottomNavigationViewEx = new BottomNavigationViewEx(getBaseContext());
+
+        Log.e(TAG, "setupBottomNavigationViewBar called");
+        BottomNavigationViewEx bottomNavigationViewEx = (BottomNavigationViewEx) findViewById(R.id.bottomNavigation);
         BottomNavigation.setupBottomNavigationView(bottomNavigationViewEx);
         BottomNavigation.enableNavigation(CreatePostActivity.this, bottomNavigationViewEx);
     }
-*/
 
 
-    public void btnShareClicked(View view) {
-            }
 }

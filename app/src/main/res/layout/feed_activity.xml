@@ -16,6 +16,7 @@
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:orientation="horizontal"
+        android:id="@+id/relLayoutTop"
         >
 
         <TextView
@@ -46,8 +47,8 @@
         android:id="@+id/feedList"
         android:layout_marginLeft="25dp"
         android:layout_marginRight="25dp"
-        android:layout_marginBottom="25dp"
-        android:layout_marginTop="80dp"
+        android:layout_above="@id/relLayoutBottom"
+        android:layout_below="@+id/relLayoutTop"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
@@ -66,24 +67,19 @@
 
     </RelativeLayout>
 
-
-
-
-
-
     <android.support.design.widget.FloatingActionButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-
         android:src="@drawable/ic_ask"
         app:backgroundTint="@color/colorPrimary"
         android:tint="@color/colorIcons"
         android:id="@+id/flaAddPost"
-        android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
         android:layout_above="@id/relLayoutBottom"
-        android:layout_marginBottom="70dp"
-        android:layout_marginRight="20dp"
+        android:layout_marginBottom="25dp"
+        android:layout_marginRight="25dp"
+        android:scaleX="1.5"
+        android:scaleY="1.5"
         />
 
 

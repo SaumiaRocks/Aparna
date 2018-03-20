@@ -27,15 +27,15 @@ public class LikesActivity extends AppCompatActivity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.profile_activity);
 
-//        setupBottomNavigationViewBar();
+        setupBottomNavigationViewBar();
     }
 
- /*   void setupBottomNavigationViewBar() {
+    void setupBottomNavigationViewBar() {
         BottomNavigationViewEx bottomNavigationViewEx = new BottomNavigationViewEx(getBaseContext());
         BottomNavigation.setupBottomNavigationView(bottomNavigationViewEx);
         BottomNavigation.enableNavigation(LikesActivity.this, bottomNavigationViewEx);
         Menu menu = bottomNavigationViewEx.getMenu();
         MenuItem menuItem = menu.getItem(ACTIVITY_NUM);
         menuItem.setChecked(true);
-    }*/
+    }
 }

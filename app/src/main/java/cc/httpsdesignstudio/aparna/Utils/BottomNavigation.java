@@ -25,7 +25,7 @@ import cc.httpsdesignstudio.aparna.R;
 
 public class BottomNavigation extends AppCompatActivity{
 
-    ImageView ivFeed, ivProfile, ivAlert, ivMessage;
+/*    ImageView ivFeed, ivProfile, ivAlert, ivMessage;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,14 +33,14 @@ public class BottomNavigation extends AppCompatActivity{
         ivFeed = findViewById(R.id.ivFeed);
         ivProfile = findViewById(R.id.ivProfile);
         ivAlert = findViewById(R.id.ivAlert);
-        ivMessage = findViewById(R.id.ivMessaage);    }
+        ivMessage = findViewById(R.id.ivMessaage);    }*/
 
-  /*  public static void setupBottomNavigationView(BottomNavigationViewEx bottomNavigationViewEx) {
+    public static void setupBottomNavigationView(BottomNavigationViewEx bottomNavigationViewEx) {
 
-      *//* bottomNavigationViewEx.enableAnimation(false);
+        bottomNavigationViewEx.enableAnimation(false);
         bottomNavigationViewEx.enableItemShiftingMode(false);
         bottomNavigationViewEx.enableShiftingMode(false);
-        bottomNavigationViewEx.setTextVisibility(false);*//*
+        bottomNavigationViewEx.setTextVisibility(false);
     }
 
     public static void enableNavigation(final Context context, BottomNavigationViewEx viewEx) {
@@ -76,7 +76,7 @@ public class BottomNavigation extends AppCompatActivity{
                 return false;
             }
         });
-    }*/
+    }
 
 
 }

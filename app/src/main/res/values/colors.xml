@@ -10,5 +10,7 @@
     <color name="colorDivider">#BDBDBD</color>
     <color name="colorMatchingBackground">#EAEAEA</color>
     <color name="colorLink">#0000EE</color>
+    <color name="colorLightGrey">#CCCCCC</color>
+    <color name="background">#EEEEEE</color>
 
 </resources>

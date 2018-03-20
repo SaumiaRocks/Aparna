@@ -52,6 +52,7 @@ public class FeedActivity extends AppCompatActivity {
         feedList.setLayoutManager(new LinearLayoutManager(this));
         database = FirebaseDatabase.getInstance();
         databaseReference = database.getReference();
+/*
 
         //Bottom Navigation View
         ivFeed = findViewById(R.id.ivFeed);
@@ -72,24 +73,29 @@ public class FeedActivity extends AppCompatActivity {
             public void onClick(View view) {
 
                 //start likes activity
-               /* Intent intent = new Intent(FeedActivity.this, LikesActivity.class);
-                startActivity(intent);*/
+               */
+/* Intent intent = new Intent(FeedActivity.this, LikesActivity.class);
+                startActivity(intent);*//*
+
             }
         });
         ivProfile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 //start messaging activity
-                /*Intent intent = new Intent(FeedActivity.this, ProfileActivity.class);
-                startActivity(intent);*/
+                */
+/*Intent intent = new Intent(FeedActivity.this, ProfileActivity.class);
+                startActivity(intent);*//*
+
             }
         });
+*/
 
 
 
         Query query = databaseReference;
         Log.e(TAG, "Starting feed activity");
-//        setupBottomNavigationViewBar();
+        setupBottomNavigationViewBar();
 
         //for switching between search tab and home tab
         setupViewPager();
@@ -141,17 +147,16 @@ public class FeedActivity extends AppCompatActivity {
 
 
     // setting up bottom navigation bar
- /*   void setupBottomNavigationViewBar() {
+    void setupBottomNavigationViewBar() {
 
         Log.e(TAG, "setupBottomNavigationViewBar called");
-        BottomNavigationViewEx bottomNavigationViewEx = new BottomNavigationViewEx(getBaseContext());
-        *//*BottomNavigation.setupBottomNavigationView(bottomNavigationViewEx);*//*
+        BottomNavigationViewEx bottomNavigationViewEx = (BottomNavigationViewEx) findViewById(R.id.bottomNavigation);
+        BottomNavigation.setupBottomNavigationView(bottomNavigationViewEx);
         BottomNavigation.enableNavigation(FeedActivity.this, bottomNavigationViewEx);
         Menu menu = bottomNavigationViewEx.getMenu();
         MenuItem menuItem = menu.getItem(ACTIVITY_NUM);
         menuItem.setChecked(true);
     }
-*/
 
 
 }

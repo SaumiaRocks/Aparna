@@ -1,47 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
 
         <LinearLayout
-            android:layout_marginLeft="25dp"
-            android:layout_marginRight="25dp"
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+
             android:layout_marginBottom="15dp"
             android:layout_width="match_parent"
             android:layout_height="250dp"
             android:orientation="vertical"
-            android:id="@+id/linearLayout"
+            android:id="@+id/clubLinearLayout"
+
             >
 
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
+                android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:layout_gravity="center_horizontal"
                 android:id="@+id/linearLayoutUsername"
-                android:background="@color/colorPrimary"
+                android:background="@drawable/card_layout_fill"
                 >
 
                <de.hdodenhof.circleimageview.CircleImageView
                    android:id="@+id/ivProfilePicture"
                    android:src="@mipmap/ic_profilepic"
                    android:layout_gravity="center_vertical"
-                   android:layout_marginLeft="5dp"
+                   android:layout_marginLeft="10dp"
                    android:layout_width="40dp"
                    android:layout_height="40dp"
                    android:background="@drawable/circle_shape" />
 
                 <LinearLayout
 
-                    android:layout_marginLeft="5dp"
-                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="20dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    android:layout_weight="4"
                     >
 
                     <TextView
@@ -50,24 +44,34 @@
                         android:layout_height="wrap_content"
                         android:text="Saumia Singhal"
                         android:textSize="17sp"
-                        android:textColor="@color/colorIcons"/>
+                        android:textColor="@color/colorIcons"
+                        android:layout_marginTop="10dp"
+                        />
 
                     <TextView
                         android:id="@+id/etPostTitle"
                         android:layout_width="match_parent"
                         android:textColor="@color/colorIcons"
-                        android:layout_height="15sp"
-                        android:textSize="15sp" />
+                        android:layout_height="wrap_content"
+                        android:textSize="15sp"
+                        android:layout_marginBottom="10dp"/>
 
                 </LinearLayout>
 
             </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/card_layout_grey_border">
 
             <ImageView
                 android:id="@+id/ivPostUploadedImage"
                 android:layout_width="200dp"
                 android:layout_height="100dp"
                 android:layout_gravity="center_horizontal"
+                android:layout_marginTop="5dp"
                 android:layout_marginLeft="15dp"
                 android:layout_marginRight="15dp"
                 />
@@ -76,102 +80,149 @@
                 android:id="@+id/etPostDescription"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:layout_marginLeft="5dp"
-                android:layout_marginRight="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
                 android:textSize="13sp" />
 
-            <LinearLayout
-                android:layout_margin="5dp"
+            <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="20dp"
+                android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 >
 
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
                 <TextView
                     android:id="@+id/Postlikes"
                     android:layout_width="wrap_content"
-                    android:layout_height="20dp"
+                    android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
-                    android:textColor="@color/colorSecondaryText"
+                    android:textColor="@color/colorLightGrey"
                     android:textSize="13sp"
                     android:text="@string/likes"/>
 
                 <TextView
                     android:id="@+id/PostnoOfLikes"
                     android:layout_width="wrap_content"
-                    android:layout_height="20dp"
+                    android:layout_height="wrap_content"
                     android:layout_marginLeft="15dp"
-                    android:textColor="@color/colorSecondaryText"
+                    android:textColor="@color/colorLightGrey"
                     android:textSize="13sp"
                     />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_alignParentRight="true"
+                    >
 
                 <TextView
                     android:id="@+id/Postcomments"
                     android:layout_width="wrap_content"
-                    android:layout_height="20dp"
+                    android:layout_height="wrap_content"
                     android:text="@string/Comments"
-                    android:layout_marginLeft="160dp"/>
-
+                    android:textColor="@color/colorLightGrey"
+                    android:textSize="13sp"
+                    />
 
                 <TextView
                     android:id="@+id/PostnoOfComments"
                     android:layout_width="wrap_content"
-                    android:layout_height="20dp"
-                    android:layout_marginLeft="15dp"/>
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="15dp"
+                    android:textColor="@color/colorLightGrey"
+                    />
 
-            </LinearLayout>
+                </LinearLayout>
+
+            </RelativeLayout>
+
 
             <LinearLayout
-                android:layout_marginLeft="15dp"
-                android:layout_marginRight="15dp"
-                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="7dp"
+                android:layout_marginRight="7dp"
                 android:layout_width="match_parent"
-                android:background="@color/colorSecondaryText"
-                android:layout_height="1dp">
+                android:background="@color/colorLightGrey"
+                android:layout_height="1sp"
+                android:layout_marginTop="7dp"
+                android:layout_marginBottom="7dp">
             </LinearLayout>
 
-            <android.support.v7.widget.FitWindowsLinearLayout
-                android:layout_marginTop="5dp"
-                android:layout_width="match_parent"
-                android:layout_height="20dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="5dp"
 
-                <ImageView
-                    android:id="@+id/like"
-                    android:layout_width="wrap_content"
-                    android:layout_height="20dp"
-                    android:layout_gravity="center_vertical"
-                    android:layout_marginLeft="20dp"
-                    app:srcCompat="@android:drawable/btn_star" />
+       >
 
-                <ImageView
-                    android:id="@+id/comment"
-                    android:layout_width="wrap_content"
-                    android:layout_height="20dp"
-                    android:layout_gravity="center_vertical"
-                    android:layout_marginLeft="10dp"
-                    app:srcCompat="@android:drawable/sym_action_chat" />
+        <LinearLayout
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:orientation="horizontal"
 
-                <ImageView
-                    android:id="@+id/save"
-                    android:layout_width="wrap_content"
-                    android:layout_height="20dp"
-                    android:layout_gravity="center_vertical"
-                    android:layout_marginLeft="150dp"
-                    app:srcCompat="@android:drawable/ic_menu_recent_history" />
+            >
 
-                <ImageView
-                    android:id="@+id/share"
-                    android:layout_width="wrap_content"
-                    android:layout_height="20dp"
-                    android:layout_gravity="center_vertical"
-                    android:layout_marginLeft="10dp"
-                    app:srcCompat="@android:drawable/ic_menu_share" />
-            </android.support.v7.widget.FitWindowsLinearLayout>
+            <ImageView
+                android:id="@+id/like"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                app:srcCompat="@drawable/like"
+                android:scaleY="1.5"
+                android:scaleX="1.5"
+                />
 
+            <ImageView
+                android:id="@+id/comment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="15dp"
+                app:srcCompat="@drawable/comment"
+                android:scaleY="1.5"
+                android:scaleX="1.5"/>
 
         </LinearLayout>
 
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentRight="true"
+        >
 
 
-</android.support.constraint.ConstraintLayout>
+        <ImageView
+            android:id="@+id/save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/save"
+            android:scaleY="1.3"
+            android:scaleX="1.4"/>
+
+        <ImageView
+            android:id="@+id/share"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="5dp"
+            app:srcCompat="@drawable/share"
+            android:scaleY="1.3"
+            android:scaleX="1.4"
+            />
+
+        </LinearLayout>
+
+    </RelativeLayout></LinearLayout>
+
+</LinearLayout>
+
+
+
